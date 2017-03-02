@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ResultsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *congratsLabel;
 
 @end

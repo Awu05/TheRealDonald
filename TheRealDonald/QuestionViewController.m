@@ -7,6 +7,7 @@
 //
 
 #import "QuestionViewController.h"
+#import "ResultsViewController.h"
 
 @interface QuestionViewController ()
 
@@ -18,15 +19,51 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.dao = [DAO sharedInstance];
+    self.resultsVC = [[ResultsViewController alloc]initWithNibName:@"ResultsViewController" bundle:nil];
+    self.questionCount = 1;
+    self.correctAnswers = 0;
 }
 
 - (IBAction)truePressed:(id)sender {
     
+    if(self.currentQuestion.real == TRUE){
+        self.correctAnswers ++;
+    }
+    
+    if(self.questionCount == 10){
+        
+        [self moveToResultsScreen];
+        
+    } else {
+        
+        
+        
+    }
     
 }
 
 - (IBAction)falsePressed:(id)sender {
     
+    if(self.currentQuestion.real == FALSE){
+        self.correctAnswers ++;
+    }
+
+    
+    if(self.questionCount == 10){
+        
+        [self moveToResultsScreen];
+        
+    } else {
+        
+        
+        
+    }
+    
+}
+
+-(void) moveToResultsScreen{
+    
+    [self presentViewController:self.resultsVC animated:YES completion:^{}];
     
 }
 

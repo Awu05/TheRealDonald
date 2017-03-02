@@ -18,6 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+- (IBAction)playAgainPressed:(id)sender {
+    
+    [[self parentViewController] dismissViewControllerAnimated:YES completion:^{}];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

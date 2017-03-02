@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DAO.h"
+#import "NewsFormat.h"
+
+@class ResultsViewController;
 
 @interface QuestionViewController : UIViewController
 
@@ -15,6 +18,14 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
 
+@property int questionCount;
+
+@property int correctAnswers;
+
+@property NewsFormat *currentQuestion;
+
 @property DAO *dao;
+
+@property ResultsViewController *resultsVC;
 
 @end

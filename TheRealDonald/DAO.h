@@ -11,6 +11,8 @@
 
 @interface DAO : NSObject
 
+@property NSMutableArray<NewsFormat*> *newsArticles;
+
 +(DAO*) sharedInstance;
 
 @end
