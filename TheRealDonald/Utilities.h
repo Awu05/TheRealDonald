@@ -10,4 +10,10 @@
 
 @interface Utilities : NSObject
 
+
++ (void) downloadData;
+
++ (void) createNewsObjects: (NSData*) data;
+
+
 @end
