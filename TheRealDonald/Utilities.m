@@ -35,6 +35,9 @@
 }
 
 + (void) createNewsObjects: (NSData*) responseData {
+    
+    DAO *mySharedData = [DAO sharedInstance];
+    
     NSError *error;
     
     NSDictionary *responseDataDict = [NSJSONSerialization JSONObjectWithData: responseData options:kNilOptions error:&error];
@@ -62,8 +65,14 @@
         [newsArticleArray addObject:title];
     }
     
-    NSLog(@"NEWS ARTICLE ARRAY: %@\nCount: %lu", newsArticleArray, (unsigned long)newsArticleArray.count);
+    //NSLog(@"NEWS ARTICLE ARRAY: %@\nCount: %lu", newsArticleArray, (unsigned long)newsArticleArray.count);
     
+    for (NSString *headline in newsArticleArray) {
+        [mySharedData createNewsFormat:headline andTrue:true];
+    }
+    
+    
+    NSLog(@"Count: %lu", (unsigned long)mySharedData.newsArticles.count);
     
 }
 

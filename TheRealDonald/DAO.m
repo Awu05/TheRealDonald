@@ -24,13 +24,15 @@
 {
     self = [super init];
     if (self) {
-        [self createNewsFormat];
+        self.newsArticles = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
--(void) createNewsFormat{
+-(void) createNewsFormat: (NSString*) headline andTrue: (BOOL)valid {
+    NewsFormat *newHeadline = [[NewsFormat alloc] initWithHeadline:headline andTruth:valid];
     
+    [self.newsArticles addObject:newHeadline];
 }
 
 @end

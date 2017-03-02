@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DAO.h"
 
 @interface Utilities : NSObject
 
