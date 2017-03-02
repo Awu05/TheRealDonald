@@ -13,6 +13,12 @@
 		E855D19D1E689B80008EF25A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E855D19B1E689B80008EF25A /* Main.storyboard */; };
 		E855D19F1E689B80008EF25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E855D19E1E689B80008EF25A /* Assets.xcassets */; };
 		E855D1A21E689B80008EF25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E855D1A01E689B80008EF25A /* LaunchScreen.storyboard */; };
+		E855D1AB1E689FED008EF25A /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E855D1AA1E689FED008EF25A /* Utilities.m */; };
+		E855D1AE1E68A00D008EF25A /* NewsFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = E855D1AD1E68A00D008EF25A /* NewsFormat.m */; };
+		E855D1B21E68A049008EF25A /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E855D1B01E68A049008EF25A /* QuestionViewController.m */; };
+		E855D1B31E68A049008EF25A /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E855D1B11E68A049008EF25A /* QuestionViewController.xib */; };
+		E855D1B81E68A083008EF25A /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E855D1B61E68A083008EF25A /* ResultsViewController.m */; };
+		E855D1B91E68A083008EF25A /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E855D1B71E68A083008EF25A /* ResultsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,16 @@
 		E855D19E1E689B80008EF25A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E855D1A11E689B80008EF25A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E855D1A31E689B80008EF25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E855D1A91E689FED008EF25A /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		E855D1AA1E689FED008EF25A /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		E855D1AC1E68A00D008EF25A /* NewsFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFormat.h; sourceTree = "<group>"; };
+		E855D1AD1E68A00D008EF25A /* NewsFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFormat.m; sourceTree = "<group>"; };
+		E855D1AF1E68A049008EF25A /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		E855D1B01E68A049008EF25A /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		E855D1B11E68A049008EF25A /* QuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		E855D1B51E68A083008EF25A /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = ../ResultsViewController.h; sourceTree = "<group>"; };
+		E855D1B61E68A083008EF25A /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = ../ResultsViewController.m; sourceTree = "<group>"; };
+		E855D1B71E68A083008EF25A /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultsViewController.xib; path = ../ResultsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,12 @@
 				E855D1961E689B80008EF25A /* AppDelegate.m */,
 				E855D1981E689B80008EF25A /* ViewController.h */,
 				E855D1991E689B80008EF25A /* ViewController.m */,
+				E855D1BA1E68A08E008EF25A /* ResultsViewController */,
+				E855D1B41E68A053008EF25A /* QuestionViewController */,
+				E855D1A91E689FED008EF25A /* Utilities.h */,
+				E855D1AA1E689FED008EF25A /* Utilities.m */,
+				E855D1AC1E68A00D008EF25A /* NewsFormat.h */,
+				E855D1AD1E68A00D008EF25A /* NewsFormat.m */,
 				E855D19B1E689B80008EF25A /* Main.storyboard */,
 				E855D19E1E689B80008EF25A /* Assets.xcassets */,
 				E855D1A01E689B80008EF25A /* LaunchScreen.storyboard */,
@@ -77,6 +99,26 @@
 				E855D1931E689B80008EF25A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E855D1B41E68A053008EF25A /* QuestionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E855D1AF1E68A049008EF25A /* QuestionViewController.h */,
+				E855D1B01E68A049008EF25A /* QuestionViewController.m */,
+				E855D1B11E68A049008EF25A /* QuestionViewController.xib */,
+			);
+			name = QuestionViewController;
+			sourceTree = "<group>";
+		};
+		E855D1BA1E68A08E008EF25A /* ResultsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E855D1B51E68A083008EF25A /* ResultsViewController.h */,
+				E855D1B61E68A083008EF25A /* ResultsViewController.m */,
+				E855D1B71E68A083008EF25A /* ResultsViewController.xib */,
+			);
+			name = ResultsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +182,8 @@
 			files = (
 				E855D1A21E689B80008EF25A /* LaunchScreen.storyboard in Resources */,
 				E855D19F1E689B80008EF25A /* Assets.xcassets in Resources */,
+				E855D1B91E68A083008EF25A /* ResultsViewController.xib in Resources */,
+				E855D1B31E68A049008EF25A /* QuestionViewController.xib in Resources */,
 				E855D19D1E689B80008EF25A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,7 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E855D19A1E689B80008EF25A /* ViewController.m in Sources */,
+				E855D1B81E68A083008EF25A /* ResultsViewController.m in Sources */,
+				E855D1AE1E68A00D008EF25A /* NewsFormat.m in Sources */,
+				E855D1B21E68A049008EF25A /* QuestionViewController.m in Sources */,
 				E855D1971E689B80008EF25A /* AppDelegate.m in Sources */,
+				E855D1AB1E689FED008EF25A /* Utilities.m in Sources */,
 				E855D1941E689B80008EF25A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
