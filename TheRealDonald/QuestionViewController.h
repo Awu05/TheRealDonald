@@ -28,4 +28,6 @@
 
 @property ResultsViewController *resultsVC;
 
+@property int randNum;
+
 @end

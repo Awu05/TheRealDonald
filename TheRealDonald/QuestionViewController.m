@@ -21,8 +21,11 @@
     self.dao = [DAO sharedInstance];
     self.resultsVC = [[ResultsViewController alloc]initWithNibName:@"ResultsViewController" bundle:nil];
     
-    self.questionCount = 1;
+    self.questionCount = 0;
     self.correctAnswers = 0;
+    
+    [self getHeadline];
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -36,13 +39,13 @@
         self.correctAnswers ++;
     }
     
-    if(self.questionCount == 10){
+    if(self.questionCount == 5){
         
         [self moveToResultsScreen];
         
     } else {
         
-        
+        [self getHeadline];
         
     }
     
@@ -55,13 +58,13 @@
     }
 
     
-    if(self.questionCount == 10){
+    if(self.questionCount == 5){
         
         [self moveToResultsScreen];
         
     } else {
         
-        
+        [self getHeadline];
         
     }
     
@@ -79,14 +82,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) getHeadline {
+    self.randNum = arc4random_uniform((int)self.dao.newsArticles.count);
+    
+    NewsFormat *newHeadline = self.dao.newsArticles[self.randNum];
+    
+    self.currentQuestion = newHeadline;
+    
+    self.headlineLabel.text = newHeadline.Headline;
+    
+    [self.dao.newsArticles removeObjectAtIndex:self.randNum];
+    
+    self.questionCount += 1;
 }
-*/
 
 @end
