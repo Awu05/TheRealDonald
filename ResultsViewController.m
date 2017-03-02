@@ -16,11 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@", self.presentingViewController);
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)playAgainPressed:(id)sender {
     
-    [[self parentViewController] dismissViewControllerAnimated:YES completion:^{}];
+    
+    [self dismissViewControllerAnimated:YES completion:^{}];
     
 }
 

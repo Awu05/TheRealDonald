@@ -20,6 +20,12 @@
     // Do any additional setup after loading the view from its nib.
     self.dao = [DAO sharedInstance];
     self.resultsVC = [[ResultsViewController alloc]initWithNibName:@"ResultsViewController" bundle:nil];
+    
+    self.questionCount = 1;
+    self.correctAnswers = 0;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
     self.questionCount = 1;
     self.correctAnswers = 0;
 }
@@ -64,6 +70,7 @@
 -(void) moveToResultsScreen{
     
     [self presentViewController:self.resultsVC animated:YES completion:^{}];
+    
     
 }
 
