@@ -10,4 +10,17 @@
 
 @implementation NewsFormat
 
+-(instancetype) initWithHeadline: (NSString*) headLine
+                        andTruth: (BOOL) real{
+
+    self = [super init];
+    if (self) {
+        self.Headline = headLine;
+        self.real = real;
+    }
+    return self;
+    
+}
+
+
 @end

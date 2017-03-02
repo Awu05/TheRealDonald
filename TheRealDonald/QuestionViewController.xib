@@ -1,12 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController">
             <connections>
+                <outlet property="headlineLabel" destination="bc4-Vu-pcF" id="Lhh-dh-IFi"/>
+                <outlet property="imageView" destination="3nb-P4-Ymt" id="dMW-jd-PUT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +21,61 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kBw-k2-Z66">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3nb-P4-Ymt">
+                            <rect key="frame" x="67.5" y="0.0" width="240" height="303"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donald Trump says &quot;Im the best president ever&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc4-Vu-pcF">
+                            <rect key="frame" x="7" y="303" width="361.5" height="280.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ycy-wt-ahf">
+                            <rect key="frame" x="0.0" y="583.5" width="375" height="83.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wb5-Px-sl3">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="83.5"/>
+                                    <color key="backgroundColor" red="0.63076286020000005" green="1" blue="0.56941543930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="True">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="truePressed:" destination="-1" eventType="touchUpInside" id="kjn-tt-vN0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hU9-zt-Ust">
+                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="83.5"/>
+                                    <color key="backgroundColor" red="1" green="0.38376951990000002" blue="0.27931203290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="False">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="falsePressed:" destination="-1" eventType="touchUpInside" id="JgV-Si-QaO"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Ycy-wt-ahf" firstAttribute="leading" secondItem="kBw-k2-Z66" secondAttribute="leading" id="F3s-LK-XMg"/>
+                        <constraint firstAttribute="bottom" secondItem="Ycy-wt-ahf" secondAttribute="bottom" id="JYm-8y-Qfb"/>
+                        <constraint firstAttribute="trailing" secondItem="Ycy-wt-ahf" secondAttribute="trailing" id="xwG-jp-Nnw"/>
+                    </constraints>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ycy-wt-ahf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/8" id="OFT-QD-Fz0"/>
+                <constraint firstItem="kBw-k2-Z66" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iKy-1C-U8V"/>
+                <constraint firstAttribute="trailing" secondItem="kBw-k2-Z66" secondAttribute="trailing" id="nKL-Rf-A9L"/>
+                <constraint firstItem="kBw-k2-Z66" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sm9-Gh-eeG"/>
+                <constraint firstAttribute="bottom" secondItem="kBw-k2-Z66" secondAttribute="bottom" id="tO9-UQ-Cka"/>
+            </constraints>
+            <point key="canvasLocation" x="59.5" y="54.5"/>
         </view>
     </objects>
 </document>
