@@ -19,6 +19,7 @@
 		E855D1B31E68A049008EF25A /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E855D1B11E68A049008EF25A /* QuestionViewController.xib */; };
 		E855D1B81E68A083008EF25A /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E855D1B61E68A083008EF25A /* ResultsViewController.m */; };
 		E855D1B91E68A083008EF25A /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E855D1B71E68A083008EF25A /* ResultsViewController.xib */; };
+		FA9907FF1E68A8830014B55A /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9907FE1E68A8830014B55A /* DAO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		E855D1B51E68A083008EF25A /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = ../ResultsViewController.h; sourceTree = "<group>"; };
 		E855D1B61E68A083008EF25A /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = ../ResultsViewController.m; sourceTree = "<group>"; };
 		E855D1B71E68A083008EF25A /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultsViewController.xib; path = ../ResultsViewController.xib; sourceTree = "<group>"; };
+		FA9907FD1E68A8830014B55A /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
+		FA9907FE1E68A8830014B55A /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +81,15 @@
 				E855D1961E689B80008EF25A /* AppDelegate.m */,
 				E855D1981E689B80008EF25A /* ViewController.h */,
 				E855D1991E689B80008EF25A /* ViewController.m */,
-				E855D1BA1E68A08E008EF25A /* ResultsViewController */,
+				E855D19B1E689B80008EF25A /* Main.storyboard */,
 				E855D1B41E68A053008EF25A /* QuestionViewController */,
+				E855D1BA1E68A08E008EF25A /* ResultsViewController */,
 				E855D1A91E689FED008EF25A /* Utilities.h */,
 				E855D1AA1E689FED008EF25A /* Utilities.m */,
+				FA9907FD1E68A8830014B55A /* DAO.h */,
+				FA9907FE1E68A8830014B55A /* DAO.m */,
 				E855D1AC1E68A00D008EF25A /* NewsFormat.h */,
 				E855D1AD1E68A00D008EF25A /* NewsFormat.m */,
-				E855D19B1E689B80008EF25A /* Main.storyboard */,
 				E855D19E1E689B80008EF25A /* Assets.xcassets */,
 				E855D1A01E689B80008EF25A /* LaunchScreen.storyboard */,
 				E855D1A31E689B80008EF25A /* Info.plist */,
@@ -199,6 +204,7 @@
 				E855D1B81E68A083008EF25A /* ResultsViewController.m in Sources */,
 				E855D1AE1E68A00D008EF25A /* NewsFormat.m in Sources */,
 				E855D1B21E68A049008EF25A /* QuestionViewController.m in Sources */,
+				FA9907FF1E68A8830014B55A /* DAO.m in Sources */,
 				E855D1971E689B80008EF25A /* AppDelegate.m in Sources */,
 				E855D1AB1E689FED008EF25A /* Utilities.m in Sources */,
 				E855D1941E689B80008EF25A /* main.m in Sources */,
@@ -360,6 +366,7 @@
 				E855D1A81E689B80008EF25A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

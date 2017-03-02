@@ -10,4 +10,11 @@
 
 @interface NewsFormat : NSObject
 
+@property NSString *Headline;
+
+@property BOOL real;
+
+-(instancetype) initWithHeadline: (NSString*) headLine
+                        andTruth: (BOOL) real;
+
 @end

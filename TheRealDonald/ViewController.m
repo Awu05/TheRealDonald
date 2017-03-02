@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "QuestionViewController.h"
 
 @interface ViewController ()
 
@@ -17,8 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.questionVC = [[QuestionViewController alloc]initWithNibName:@"QuestionViewController" bundle:nil];
 }
 
+- (IBAction)startButtonPressed:(id)sender {
+    
+    [self presentViewController:self.questionVC animated:YES completion:^{}];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
