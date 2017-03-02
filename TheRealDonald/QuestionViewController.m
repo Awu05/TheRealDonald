@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.dao = [DAO sharedInstance];
+}
+
+- (IBAction)truePressed:(id)sender {
+    
+    
+}
+
+- (IBAction)falsePressed:(id)sender {
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
