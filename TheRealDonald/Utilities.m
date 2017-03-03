@@ -72,7 +72,7 @@
     }
     
     
-    NSLog(@"Count: %lu", (unsigned long)mySharedData.newsArticles.count);
+    //NSLog(@"Count: %lu", (unsigned long)mySharedData.newsArticles.count);
     
 }
 
