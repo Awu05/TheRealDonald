@@ -31,31 +31,61 @@
         case 0:
             self.congratsLabel.text = @"You may actually be retarted...";
             self.imageView.image = [UIImage imageNamed:@"TrumpRetard"];
+            [self playSound:@"stupid"];
             break;
         case 1:
             self.congratsLabel.text = @"Well at least you got one right";
             self.imageView.image = [UIImage imageNamed:@"TrumpTinyFace"];
+            [self playSound:@"stupid"];
             break;
         case 2:
             self.congratsLabel.text = @"You might wanna watch the news just a tad more big guy";
             self.imageView.image = [UIImage imageNamed:@"TrumpWallCop"];
+            [self playSound:@"cringe"];
             break;
         case 3:
             self.congratsLabel.text = @"Pretty Boss";
             self.imageView.image = [UIImage imageNamed:@"TrumpBoss"];
+            [self playSound:@"cringe"];
             break;
         case 4:
             self.congratsLabel.text = @"Atta boy!";
             self.imageView.image = [UIImage imageNamed:@"TrumpThumbs"];
+            [self playSound:@"cringe"];
             break;
         case 5:
             self.congratsLabel.text = @"You know Trump like the back of his tiny hand";
             self.imageView.image = [UIImage imageNamed:@"Trump1"];
+            [self playSound:@"greatagain"];
             break;
         default:
             NSLog (@"Integer out of range");
             break;
     }
+}
+
+- (void) playSound: (NSString*) play {
+    SystemSoundID audioEffect;
+    NSString *path;
+    if ([play  isEqual: @"stupid"]) {
+        path = [[NSBundle mainBundle] pathForResource : @"stupid" ofType :@"mp3"];
+    } else if ([play  isEqual: @"greatagain"]) {
+        path = [[NSBundle mainBundle] pathForResource : @"greatagain" ofType :@"mp3"];
+    } else if ([play  isEqual: @"cringe"]) {
+        path = [[NSBundle mainBundle] pathForResource : @"cringe" ofType :@"mp3"];
+    }
+    
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
+        NSURL *pathURL = [NSURL fileURLWithPath: path];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+    }
+    else {
+        NSLog(@"error, file not found: %@", path);
+    }
+    
+    
 }
 
 - (IBAction)playAgainPressed:(id)sender {
