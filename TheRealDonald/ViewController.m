@@ -17,22 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     self.questionVC = [[QuestionViewController alloc]initWithNibName:@"QuestionViewController" bundle:nil];
     
     [Utilities downloadData];
-    
 }
 
 - (IBAction)startButtonPressed:(id)sender {
     
     [self presentViewController:self.questionVC animated:YES completion:^{}];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) resetData {
