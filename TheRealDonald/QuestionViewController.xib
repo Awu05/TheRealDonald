@@ -13,8 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController">
             <connections>
                 <outlet property="correctImg" destination="U5Z-s7-tRr" id="7Jo-EA-3iA"/>
+                <outlet property="falseBtn" destination="hU9-zt-Ust" id="bw4-Sr-DJQ"/>
                 <outlet property="headlineLabel" destination="bc4-Vu-pcF" id="Lhh-dh-IFi"/>
                 <outlet property="imageView" destination="3nb-P4-Ymt" id="dMW-jd-PUT"/>
+                <outlet property="trueBtn" destination="Wb5-Px-sl3" id="4EU-A0-1gb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

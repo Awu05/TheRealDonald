@@ -60,6 +60,9 @@
 }
 
 - (void) animateImg {
+    self.trueBtn.enabled = false;
+    self.falseBtn.enabled = false;
+    
     self.correctImg.alpha = 0.0;
     [UIView animateWithDuration:1.0
                           delay:0.0
@@ -76,6 +79,8 @@
                                               
                                           }
                                           completion:^(BOOL finished){
+                                              self.trueBtn.enabled = true;
+                                              self.falseBtn.enabled = true;
                                               [self getHeadline];
                                           }];
                      }];

@@ -20,6 +20,10 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *correctImg;
 
+@property (weak, nonatomic) IBOutlet UIButton *trueBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *falseBtn;
+
 
 @property (nonatomic, strong) NSArray *trumpPics;
 

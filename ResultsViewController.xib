@@ -23,6 +23,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurblue" translatesAutoresizingMaskIntoConstraints="NO" id="z0V-9h-enp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="552"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bwU-bl-5ed">
                     <rect key="frame" x="0.0" y="20" width="375" height="418"/>
                     <constraints>
@@ -31,6 +34,12 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5 Correct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHI-cY-35b">
                     <rect key="frame" x="0.0" y="448" width="375" height="42"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-Yn-Op9">
+                    <rect key="frame" x="0.0" y="500" width="375" height="42"/>
                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -44,12 +53,6 @@
                         <action selector="playAgainPressed:" destination="-1" eventType="touchUpInside" id="Boj-Sq-ms4"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-Yn-Op9">
-                    <rect key="frame" x="0.0" y="500" width="375" height="42"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -58,16 +61,23 @@
                 <constraint firstItem="sIV-hX-6A6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9wA-04-rNs"/>
                 <constraint firstAttribute="bottom" secondItem="sIV-hX-6A6" secondAttribute="bottom" id="Eax-se-U3Q"/>
                 <constraint firstItem="bwU-bl-5ed" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Mxg-zg-gLC"/>
+                <constraint firstItem="z0V-9h-enp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WcU-kB-crL"/>
                 <constraint firstItem="SHI-cY-35b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="co4-Gm-Phh"/>
+                <constraint firstItem="sIV-hX-6A6" firstAttribute="top" secondItem="z0V-9h-enp" secondAttribute="bottom" id="dJ2-6R-Nrs"/>
                 <constraint firstItem="yx5-Yn-Op9" firstAttribute="top" secondItem="SHI-cY-35b" secondAttribute="bottom" constant="10" id="enX-9k-eOU"/>
                 <constraint firstAttribute="trailing" secondItem="yx5-Yn-Op9" secondAttribute="trailing" id="gwY-jE-eTs"/>
                 <constraint firstAttribute="trailing" secondItem="SHI-cY-35b" secondAttribute="trailing" id="iMZ-wR-pm5"/>
                 <constraint firstItem="bwU-bl-5ed" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iey-D6-Eib"/>
+                <constraint firstItem="z0V-9h-enp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mMU-6e-XPF"/>
                 <constraint firstItem="SHI-cY-35b" firstAttribute="top" secondItem="bwU-bl-5ed" secondAttribute="bottom" constant="10" id="pR2-mg-cVA"/>
                 <constraint firstAttribute="trailing" secondItem="bwU-bl-5ed" secondAttribute="trailing" id="sC8-Lc-VR5"/>
+                <constraint firstAttribute="trailing" secondItem="z0V-9h-enp" secondAttribute="trailing" id="uxf-Eb-HgJ"/>
                 <constraint firstAttribute="trailing" secondItem="sIV-hX-6A6" secondAttribute="trailing" id="wmd-XI-lRY"/>
             </constraints>
             <point key="canvasLocation" x="59.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="blurblue" width="540" height="336"/>
+    </resources>
 </document>
