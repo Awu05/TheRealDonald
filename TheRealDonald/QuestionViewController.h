@@ -18,6 +18,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *correctImg;
+
+
 @property (nonatomic, strong) NSArray *trumpPics;
 
 @property int questionCount;

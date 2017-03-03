@@ -35,9 +35,12 @@
     
     if(self.currentQuestion.real == TRUE){
         self.dao.correctAnswers ++;
+        self.correctImg.image = [UIImage imageNamed:@"correct"];
+    } else {
+        self.correctImg.image = [UIImage imageNamed:@"incorrect"];
     }
     
-    [self getHeadline];
+    [self animateImg];
     
 }
 
@@ -45,10 +48,37 @@
     
     if(self.currentQuestion.real == FALSE){
         self.dao.correctAnswers ++;
+        self.correctImg.image = [UIImage imageNamed:@"correct"];
+    } else {
+        self.correctImg.image = [UIImage imageNamed:@"incorrect"];
     }
-
-    [self getHeadline];
     
+    [self animateImg];
+
+    
+    
+}
+
+- (void) animateImg {
+    self.correctImg.alpha = 0.0;
+    [UIView animateWithDuration:1.0
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         self.correctImg.alpha = 1.0;
+                     }
+                     completion:^(BOOL finished){
+                         [UIView animateWithDuration:1.0
+                                               delay:1.0
+                                             options: UIViewAnimationOptionCurveEaseOut
+                                          animations:^{
+                                              self.correctImg.alpha = 0.0;
+                                              
+                                          }
+                                          completion:^(BOOL finished){
+                                              [self getHeadline];
+                                          }];
+                     }];
 }
 
 -(void) moveToResultsScreen{

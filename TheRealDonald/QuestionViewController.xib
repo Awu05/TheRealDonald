@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionViewController">
             <connections>
+                <outlet property="correctImg" destination="U5Z-s7-tRr" id="7Jo-EA-3iA"/>
                 <outlet property="headlineLabel" destination="bc4-Vu-pcF" id="Lhh-dh-IFi"/>
                 <outlet property="imageView" destination="3nb-P4-Ymt" id="dMW-jd-PUT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -65,12 +66,16 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="incorrect" translatesAutoresizingMaskIntoConstraints="NO" id="U5Z-s7-tRr">
+                    <rect key="frame" x="-10.5" y="77.5" width="395" height="512"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="bc4-Vu-pcF" secondAttribute="trailing" id="0zy-oD-eT3"/>
                 <constraint firstAttribute="trailing" secondItem="3nb-P4-Ymt" secondAttribute="trailing" id="8sG-8e-pfg"/>
                 <constraint firstItem="MNQ-UM-s6L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="C5g-SF-3e0"/>
+                <constraint firstItem="U5Z-s7-tRr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="EBK-uV-eJx"/>
                 <constraint firstItem="aeg-Ms-MyU" firstAttribute="top" secondItem="3nb-P4-Ymt" secondAttribute="bottom" constant="5" id="GVj-av-Fqy"/>
                 <constraint firstItem="Ycy-wt-ahf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GsS-oK-har"/>
                 <constraint firstAttribute="trailing" secondItem="aeg-Ms-MyU" secondAttribute="trailing" id="KlZ-nh-uoJ"/>
@@ -80,6 +85,7 @@
                 <constraint firstAttribute="trailing" secondItem="MNQ-UM-s6L" secondAttribute="trailing" id="TnT-mq-Cct"/>
                 <constraint firstAttribute="trailing" secondItem="Ycy-wt-ahf" secondAttribute="trailing" id="XBL-nG-Tbq"/>
                 <constraint firstItem="aeg-Ms-MyU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-38" id="YeO-gi-YM1"/>
+                <constraint firstItem="U5Z-s7-tRr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="adO-11-2Nc"/>
                 <constraint firstAttribute="bottom" secondItem="MNQ-UM-s6L" secondAttribute="bottom" id="bQk-o5-5Dq"/>
                 <constraint firstItem="Ycy-wt-ahf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/8" id="bVi-n2-3o8"/>
                 <constraint firstAttribute="bottom" secondItem="Ycy-wt-ahf" secondAttribute="bottom" id="bbi-bA-mqx"/>
@@ -95,5 +101,6 @@
     <resources>
         <image name="Trump20" width="647" height="354"/>
         <image name="background" width="626" height="626"/>
+        <image name="incorrect" width="395" height="512"/>
     </resources>
 </document>
