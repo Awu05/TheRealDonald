@@ -10,8 +10,8 @@
 
 @implementation DAO
 
+// FIXME: Why do you always create a DAO? Are you an old school java developer? This approach isn't standard
 +(DAO*) sharedInstance{
-    
     static DAO *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

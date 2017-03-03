@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     self.dao = [DAO sharedInstance];
     self.resultsVC = [[ResultsViewController alloc]initWithNibName:@"ResultsViewController" bundle:nil];
     
@@ -33,8 +32,8 @@
 
 - (IBAction)truePressed:(id)sender {
     
-    if(self.currentQuestion.real == TRUE){
-        self.dao.correctAnswers ++;
+    if(self.currentQuestion.real == TRUE) {
+        self.dao.correctAnswers++;
     }
     
     [self getHeadline];
@@ -43,8 +42,8 @@
 
 - (IBAction)falsePressed:(id)sender {
     
-    if(self.currentQuestion.real == FALSE){
-        self.dao.correctAnswers ++;
+    if(self.currentQuestion.real == FALSE) {
+        self.dao.correctAnswers++;
     }
 
     [self getHeadline];
@@ -55,11 +54,6 @@
     
     [self presentViewController:self.resultsVC animated:YES completion:^{}];
         
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) getHeadline {

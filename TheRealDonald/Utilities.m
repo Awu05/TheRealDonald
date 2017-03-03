@@ -10,8 +10,6 @@
 
 @implementation Utilities
 
-
-
 + (void) downloadData {
     NSString *urlString = @"https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=ec77746b0e834a9198f3200dbf44c295&q=donaldtrump";
     
