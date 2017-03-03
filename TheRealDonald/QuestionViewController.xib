@@ -23,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trump20" translatesAutoresizingMaskIntoConstraints="NO" id="3nb-P4-Ymt">
-                    <rect key="frame" x="0.0" y="10" width="375" height="253.5"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="242"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donald Trump says &quot;Im the best president ever&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bc4-Vu-pcF">
-                    <rect key="frame" x="0.0" y="321" width="375" height="263"/>
+                    <rect key="frame" x="0.0" y="324.5" width="375" height="259.5"/>
                     <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="23"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                     </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ture or False, was this headline mentioned in the news?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeg-Ms-MyU">
-                    <rect key="frame" x="0.0" y="263.5" width="375" height="57.5"/>
+                    <rect key="frame" x="0.0" y="267" width="375" height="57.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -67,16 +67,16 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="bc4-Vu-pcF" secondAttribute="trailing" id="0zy-oD-eT3"/>
                 <constraint firstAttribute="trailing" secondItem="3nb-P4-Ymt" secondAttribute="trailing" id="8sG-8e-pfg"/>
-                <constraint firstItem="aeg-Ms-MyU" firstAttribute="top" secondItem="3nb-P4-Ymt" secondAttribute="bottom" id="GVj-av-Fqy"/>
+                <constraint firstItem="aeg-Ms-MyU" firstAttribute="top" secondItem="3nb-P4-Ymt" secondAttribute="bottom" constant="5" id="GVj-av-Fqy"/>
                 <constraint firstItem="Ycy-wt-ahf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GsS-oK-har"/>
                 <constraint firstAttribute="trailing" secondItem="aeg-Ms-MyU" secondAttribute="trailing" id="KlZ-nh-uoJ"/>
                 <constraint firstItem="bc4-Vu-pcF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LUe-WA-wmv"/>
                 <constraint firstItem="bc4-Vu-pcF" firstAttribute="top" secondItem="aeg-Ms-MyU" secondAttribute="bottom" id="R1J-pQ-Ivk"/>
                 <constraint firstAttribute="trailing" secondItem="Ycy-wt-ahf" secondAttribute="trailing" id="XBL-nG-Tbq"/>
-                <constraint firstItem="aeg-Ms-MyU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-41.5" id="YeO-gi-YM1"/>
+                <constraint firstItem="aeg-Ms-MyU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-38" id="YeO-gi-YM1"/>
                 <constraint firstItem="Ycy-wt-ahf" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/8" id="bVi-n2-3o8"/>
                 <constraint firstAttribute="bottom" secondItem="Ycy-wt-ahf" secondAttribute="bottom" id="bbi-bA-mqx"/>
-                <constraint firstItem="3nb-P4-Ymt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="ddM-7q-b3g"/>
+                <constraint firstItem="3nb-P4-Ymt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="ddM-7q-b3g"/>
                 <constraint firstItem="3nb-P4-Ymt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eXf-D7-RVe"/>
                 <constraint firstItem="Ycy-wt-ahf" firstAttribute="top" secondItem="bc4-Vu-pcF" secondAttribute="bottom" id="f5h-ov-r3s"/>
                 <constraint firstItem="aeg-Ms-MyU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="paG-5g-Mck"/>

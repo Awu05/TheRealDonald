@@ -21,6 +21,9 @@
     self.dao = [DAO sharedInstance];
     self.resultsVC = [[ResultsViewController alloc]initWithNibName:@"ResultsViewController" bundle:nil];
     
+    self.trumpPics = [[NSArray alloc] initWithObjects:
+                      @"Trump1", @"Trump2", @"Trump3", @"Trump4", @"Trump5", @"Trump6", @"Trump7", @"Trump8", @"Trump9", @"Trump10", @"Trump11", @"Trump12", @"Trump12", @"Trump14", @"Trump15", @"Trump16", @"Trump17", @"Trump18", @"Trump19", @"Trump20", nil];
+    
     self.questionCount = 0;
     self.dao.correctAnswers = 0;
     
@@ -67,8 +70,11 @@
         
     } else {
         
+        int randPicIndex = arc4random_uniform((int)self.trumpPics.count);
+        self.imageView.image = [UIImage imageNamed:self.trumpPics[randPicIndex]];
+        
         self.randNum = arc4random_uniform((int)self.dao.newsArticles.count);
-        NSLog(@"News article count: %lu", (unsigned long)self.dao.newsArticles.count);
+        //NSLog(@"News article count: %lu", (unsigned long)self.dao.newsArticles.count);
         NewsFormat *newHeadline = self.dao.newsArticles[self.randNum];
         
         self.currentQuestion = newHeadline;
