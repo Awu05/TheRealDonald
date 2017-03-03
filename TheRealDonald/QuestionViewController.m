@@ -22,21 +22,21 @@
     self.resultsVC = [[ResultsViewController alloc]initWithNibName:@"ResultsViewController" bundle:nil];
     
     self.questionCount = 0;
-    self.correctAnswers = 0;
+    self.dao.correctAnswers = 0;
     
     [self getHeadline];
     
 }
 
 -(void) viewWillAppear:(BOOL)animated{
-    self.questionCount = 1;
-    self.correctAnswers = 0;
+    self.questionCount = 0;
+    self.dao.correctAnswers = 0;
 }
 
 - (IBAction)truePressed:(id)sender {
     
     if(self.currentQuestion.real == TRUE){
-        self.correctAnswers ++;
+        self.dao.correctAnswers ++;
     }
     
     if(self.questionCount == 5){
@@ -54,7 +54,7 @@
 - (IBAction)falsePressed:(id)sender {
     
     if(self.currentQuestion.real == FALSE){
-        self.correctAnswers ++;
+        self.dao.correctAnswers ++;
     }
 
     
@@ -73,8 +73,7 @@
 -(void) moveToResultsScreen{
     
     [self presentViewController:self.resultsVC animated:YES completion:^{}];
-    
-    
+        
 }
 
 - (void)didReceiveMemoryWarning {

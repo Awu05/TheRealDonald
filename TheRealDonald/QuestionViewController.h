@@ -20,8 +20,6 @@
 
 @property int questionCount;
 
-@property int correctAnswers;
-
 @property NewsFormat *currentQuestion;
 
 @property DAO *dao;

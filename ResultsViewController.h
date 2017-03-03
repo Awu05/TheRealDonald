@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DAO.h"
 
 @interface ResultsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *congratsLabel;
+
+@property DAO *dao;
 
 @end
