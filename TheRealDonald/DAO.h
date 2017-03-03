@@ -19,4 +19,6 @@
 
 -(void) createNewsFormat: (NSString*) headline andTrue: (BOOL)valid ;
 
+-(void) createFakeNews;
+
 @end

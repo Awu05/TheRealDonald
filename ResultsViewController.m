@@ -55,7 +55,14 @@
 - (IBAction)playAgainPressed:(id)sender {
     
     
-    [self dismissViewControllerAnimated:YES completion:^{}];
+    //[self dismissViewControllerAnimated:YES completion:^{}];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ViewController *myVC = (ViewController *)[storyboard instantiateViewControllerWithIdentifier:@"startScreen"];
+    
+    [myVC resetData];
+    
+    [self presentViewController:myVC animated:YES completion:nil];
     
 }
 

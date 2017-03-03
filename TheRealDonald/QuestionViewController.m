@@ -28,26 +28,13 @@
     
 }
 
--(void) viewWillAppear:(BOOL)animated{
-    self.questionCount = 0;
-    self.dao.correctAnswers = 0;
-}
-
 - (IBAction)truePressed:(id)sender {
     
     if(self.currentQuestion.real == TRUE){
         self.dao.correctAnswers ++;
     }
     
-    if(self.questionCount == 5){
-        
-        [self moveToResultsScreen];
-        
-    } else {
-        
-        [self getHeadline];
-        
-    }
+    [self getHeadline];
     
 }
 
@@ -57,16 +44,7 @@
         self.dao.correctAnswers ++;
     }
 
-    
-    if(self.questionCount == 5){
-        
-        [self moveToResultsScreen];
-        
-    } else {
-        
-        [self getHeadline];
-        
-    }
+    [self getHeadline];
     
 }
 
@@ -82,17 +60,28 @@
 }
 
 - (void) getHeadline {
-    self.randNum = arc4random_uniform((int)self.dao.newsArticles.count);
     
-    NewsFormat *newHeadline = self.dao.newsArticles[self.randNum];
+    if(self.questionCount == 5){
+        
+        [self moveToResultsScreen];
+        
+    } else {
+        
+        self.randNum = arc4random_uniform((int)self.dao.newsArticles.count);
+        NSLog(@"News article count: %lu", (unsigned long)self.dao.newsArticles.count);
+        NewsFormat *newHeadline = self.dao.newsArticles[self.randNum];
+        
+        self.currentQuestion = newHeadline;
+        
+        self.headlineLabel.text = newHeadline.Headline;
+        
+        [self.dao.newsArticles removeObjectAtIndex:self.randNum];
+        
+        self.questionCount += 1;
+        
+    }
     
-    self.currentQuestion = newHeadline;
-    
-    self.headlineLabel.text = newHeadline.Headline;
-    
-    [self.dao.newsArticles removeObjectAtIndex:self.randNum];
-    
-    self.questionCount += 1;
+    NSLog(@"Questions Count: %d", self.questionCount);
 }
 
 @end

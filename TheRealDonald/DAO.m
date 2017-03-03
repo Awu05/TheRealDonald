@@ -25,6 +25,8 @@
     self = [super init];
     if (self) {
         self.newsArticles = [[NSMutableArray alloc] init];
+        self.correctAnswers = 0;
+        [self createFakeNews];
     }
     return self;
 }
@@ -35,7 +37,7 @@
     [self.newsArticles addObject:newHeadline];
 }
 
--(void) createFakeNews{
+-(void) createFakeNews {
     
     
     NewsFormat *fakeHeadline1 = [[NewsFormat alloc] initWithHeadline: @"Donald Trump issues a press release crowning himself 'God Emperor' of the debate." andTruth:FALSE];

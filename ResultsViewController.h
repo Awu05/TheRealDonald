@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DAO.h"
+#import "ViewController.h"
 
 @interface ResultsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
