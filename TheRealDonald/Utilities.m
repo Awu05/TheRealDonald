@@ -55,7 +55,7 @@
     for (NSDictionary *item in docsArray) {
         NSString *title = [item objectForKey:@"lead_paragraph"];
         if ([title  isEqual: [NSNull null]]) {
-            NSLog(@"Getting info from abstract");
+            //NSLog(@"Getting info from abstract");
             title = [item objectForKey:@"abstract"];
         }
         [newsArticleArray addObject:title];

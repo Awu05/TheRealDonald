@@ -87,7 +87,7 @@
         
     }
     
-    NSLog(@"Questions Count: %d", self.questionCount);
+    //NSLog(@"Questions Count: %d", self.questionCount);
 }
 
 @end
