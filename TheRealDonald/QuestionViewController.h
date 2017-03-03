@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "DAO.h"
 #import "NewsFormat.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class ResultsViewController;
 

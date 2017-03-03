@@ -36,8 +36,10 @@
     if(self.currentQuestion.real == TRUE){
         self.dao.correctAnswers ++;
         self.correctImg.image = [UIImage imageNamed:@"correct"];
+        [self playCorrectSound:true];
     } else {
         self.correctImg.image = [UIImage imageNamed:@"incorrect"];
+        [self playCorrectSound:false];
     }
     
     [self animateImg];
@@ -49,12 +51,34 @@
     if(self.currentQuestion.real == FALSE){
         self.dao.correctAnswers ++;
         self.correctImg.image = [UIImage imageNamed:@"correct"];
+        [self playCorrectSound:true];
     } else {
         self.correctImg.image = [UIImage imageNamed:@"incorrect"];
+        [self playCorrectSound:false];
     }
     
     [self animateImg];
+    
+}
 
+- (void) playCorrectSound: (BOOL) play {
+    SystemSoundID audioEffect;
+    NSString *path;
+    if (play) {
+        path = [[NSBundle mainBundle] pathForResource : @"YouBetterBelieve" ofType :@"mp3"];
+    } else {
+        path = [[NSBundle mainBundle] pathForResource : @"Wrong" ofType :@"mp3"];
+    }
+    
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath : path]) {
+        NSURL *pathURL = [NSURL fileURLWithPath: path];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+    }
+    else {
+        NSLog(@"error, file not found: %@", path);
+    }
     
     
 }

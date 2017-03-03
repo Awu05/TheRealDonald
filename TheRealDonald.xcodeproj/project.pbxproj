@@ -19,6 +19,8 @@
 		E855D1B31E68A049008EF25A /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E855D1B11E68A049008EF25A /* QuestionViewController.xib */; };
 		E855D1B81E68A083008EF25A /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E855D1B61E68A083008EF25A /* ResultsViewController.m */; };
 		E855D1B91E68A083008EF25A /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E855D1B71E68A083008EF25A /* ResultsViewController.xib */; };
+		E855D1C01E69CE6D008EF25A /* YouBetterBelieve.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E855D1BD1E69CE6D008EF25A /* YouBetterBelieve.mp3 */; };
+		E855D1C31E69D0F5008EF25A /* Wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E855D1C21E69D0F5008EF25A /* Wrong.mp3 */; };
 		FA9907FF1E68A8830014B55A /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9907FE1E68A8830014B55A /* DAO.m */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		E855D1B51E68A083008EF25A /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewController.h; path = ../ResultsViewController.h; sourceTree = "<group>"; };
 		E855D1B61E68A083008EF25A /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewController.m; path = ../ResultsViewController.m; sourceTree = "<group>"; };
 		E855D1B71E68A083008EF25A /* ResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultsViewController.xib; path = ../ResultsViewController.xib; sourceTree = "<group>"; };
+		E855D1BD1E69CE6D008EF25A /* YouBetterBelieve.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = YouBetterBelieve.mp3; sourceTree = "<group>"; };
+		E855D1C21E69D0F5008EF25A /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
 		FA9907FD1E68A8830014B55A /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
 		FA9907FE1E68A8830014B55A /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +94,8 @@
 				FA9907FE1E68A8830014B55A /* DAO.m */,
 				E855D1AC1E68A00D008EF25A /* NewsFormat.h */,
 				E855D1AD1E68A00D008EF25A /* NewsFormat.m */,
+				E855D1BD1E69CE6D008EF25A /* YouBetterBelieve.mp3 */,
+				E855D1C21E69D0F5008EF25A /* Wrong.mp3 */,
 				E855D19E1E689B80008EF25A /* Assets.xcassets */,
 				E855D1A01E689B80008EF25A /* LaunchScreen.storyboard */,
 				E855D1A31E689B80008EF25A /* Info.plist */,
@@ -186,9 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E855D1A21E689B80008EF25A /* LaunchScreen.storyboard in Resources */,
+				E855D1C01E69CE6D008EF25A /* YouBetterBelieve.mp3 in Resources */,
 				E855D19F1E689B80008EF25A /* Assets.xcassets in Resources */,
 				E855D1B91E68A083008EF25A /* ResultsViewController.xib in Resources */,
 				E855D1B31E68A049008EF25A /* QuestionViewController.xib in Resources */,
+				E855D1C31E69D0F5008EF25A /* Wrong.mp3 in Resources */,
 				E855D19D1E689B80008EF25A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
