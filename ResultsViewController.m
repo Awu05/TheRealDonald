@@ -30,21 +30,27 @@
             
         case 0:
             self.congratsLabel.text = @"You may actually be retarted...";
+            self.imageView.image = [UIImage imageNamed:@"TrumpRetard"];
             break;
         case 1:
             self.congratsLabel.text = @"Well at least you got one right";
+            self.imageView.image = [UIImage imageNamed:@"TrumpTinyFace"];
             break;
         case 2:
             self.congratsLabel.text = @"You might wanna watch the news just a tad more big guy";
+            self.imageView.image = [UIImage imageNamed:@"TrumpWallCop"];
             break;
         case 3:
-            self.congratsLabel.text = @"Very average";
+            self.congratsLabel.text = @"Pretty Boss";
+            self.imageView.image = [UIImage imageNamed:@"TrumpBoss"];
             break;
         case 4:
-            self.congratsLabel.text = @"Thats pretty much cheeks";
+            self.congratsLabel.text = @"Atta boy!";
+            self.imageView.image = [UIImage imageNamed:@"TrumpThumbs"];
             break;
         case 5:
             self.congratsLabel.text = @"You know Trump like the back of his tiny hand";
+            self.imageView.image = [UIImage imageNamed:@"Trump1"];
             break;
         default:
             NSLog (@"Integer out of range");
