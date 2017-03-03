@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "DAO.h"
 #import "ViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ResultsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
