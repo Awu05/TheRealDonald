@@ -13,8 +13,12 @@
 
 @property NSMutableArray<NewsFormat*> *newsArticles;
 
+@property int correctAnswers;
+
 +(DAO*) sharedInstance;
 
 -(void) createNewsFormat: (NSString*) headline andTrue: (BOOL)valid ;
+
+-(void) createFakeNews;
 
 @end

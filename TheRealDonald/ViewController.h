@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Utilities.h"
+#import "DAO.h"
 
 @class QuestionViewController;
 
@@ -16,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @property QuestionViewController *questionVC;
+
+
+- (void) resetData;
 
 @end
 

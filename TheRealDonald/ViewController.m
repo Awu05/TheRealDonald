@@ -21,6 +21,7 @@
     self.questionVC = [[QuestionViewController alloc]initWithNibName:@"QuestionViewController" bundle:nil];
     
     [Utilities downloadData];
+    
 }
 
 - (IBAction)startButtonPressed:(id)sender {
@@ -34,5 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) resetData {
+    DAO *mySharedData = [DAO sharedInstance];
+    [mySharedData.newsArticles removeAllObjects];
+    mySharedData.correctAnswers = 0;
+    [mySharedData createFakeNews];
+    
+}
 
 @end

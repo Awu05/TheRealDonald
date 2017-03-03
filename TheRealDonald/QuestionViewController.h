@@ -18,9 +18,16 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
 
-@property int questionCount;
+@property (weak, nonatomic) IBOutlet UIImageView *correctImg;
 
-@property int correctAnswers;
+@property (weak, nonatomic) IBOutlet UIButton *trueBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *falseBtn;
+
+
+@property (nonatomic, strong) NSArray *trumpPics;
+
+@property int questionCount;
 
 @property NewsFormat *currentQuestion;
 

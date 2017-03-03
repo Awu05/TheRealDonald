@@ -42,37 +42,29 @@
     
     NSDictionary *responseDataDict = [NSJSONSerialization JSONObjectWithData: responseData options:kNilOptions error:&error];
     
-    //NSLog(@"NEWS ARTICLE DICT: %@\nCount: %lu", responseDataDict, (unsigned long)responseDataDict.count);
-    
     NSMutableDictionary *responseArray = [[NSMutableDictionary alloc] initWithDictionary:[responseDataDict objectForKey:@"response"] copyItems:true];
-    
-    //NSLog(@"NEWS ARTICLE DICT: %@\nCount: %lu", responseArray, (unsigned long)responseArray.count);
     
     
     [responseArray removeObjectForKey:@"meta"];
     
-    //NSLog(@"NEWS ARTICLE DICT: %@\nCount: %lu", responseArray, (unsigned long)responseArray.count);
-    
     NSArray *docsArray = [[NSArray alloc] init];
     docsArray = [responseArray objectForKey:@"docs"];
-    
-    //NSLog(@"DOCS ARRAY: %@\nCount: %lu", docsArray, (unsigned long)docsArray.count);
     
     NSMutableArray *newsArticleArray = [[NSMutableArray alloc] init];
     
     for (NSDictionary *item in docsArray) {
         NSString *title = [item objectForKey:@"lead_paragraph"];
+        if ([title  isEqual: [NSNull null]]) {
+            //NSLog(@"Getting info from abstract");
+            title = [item objectForKey:@"abstract"];
+        }
         [newsArticleArray addObject:title];
     }
-    
-    //NSLog(@"NEWS ARTICLE ARRAY: %@\nCount: %lu", newsArticleArray, (unsigned long)newsArticleArray.count);
     
     for (NSString *headline in newsArticleArray) {
         [mySharedData createNewsFormat:headline andTrue:true];
     }
     
-    
-    NSLog(@"Count: %lu", (unsigned long)mySharedData.newsArticles.count);
     
 }
 
