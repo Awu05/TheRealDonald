@@ -18,6 +18,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *headlineLabel;
 
+@property (nonatomic, strong) NSArray *trumpPics;
+
 @property int questionCount;
 
 @property NewsFormat *currentQuestion;
